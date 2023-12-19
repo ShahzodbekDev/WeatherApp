@@ -13,8 +13,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// API key: 737667f9a3dae48fe458bfa6ca18a0f1
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,11 +40,15 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun fetchWeatherData(citiyName: String) {
-       val retrofir = Retrofit.Builder()
+
+        // Your api key so`zining o`rniga siz o`zingiznik api kalitingizni qo`ying
+
+
+        val retrofir = Retrofit.Builder()
            .addConverterFactory(GsonConverterFactory.create())
            .baseUrl("https://api.openweathermap.org/data/2.5/")
            .build().create(ApiInterface::class.java)
-        val response = retrofir.getWeatherData(citiyName, "737667f9a3dae48fe458bfa6ca18a0f1", "metric")
+        val response = retrofir.getWeatherData(citiyName, "Your api key", "metric")
         response.enqueue(object : Callback<WeatherApp>{
             override fun onResponse(call: Call<WeatherApp>, response: Response<WeatherApp>) {
                 val responseBody = response.body()

@@ -24,6 +24,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
         }
     }
     compileOptions {
@@ -36,10 +37,12 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
+
 }
 
 dependencies {
-
 
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -52,11 +55,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     val lottieVersion = "6.2.0"
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
     // GSON convertor
     val latestVersion = "2.9.0"
-    implementation ("com.squareup.retrofit2:converter-gson:$latestVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$latestVersion")
 
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
