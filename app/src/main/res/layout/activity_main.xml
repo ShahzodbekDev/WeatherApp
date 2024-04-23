@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sunny_background"
+    android:paddingBottom="45dp"
     tools:context=".MainActivity">
 
     <SearchView
@@ -12,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/searchviewshape"
         android:iconifiedByDefault="false"
@@ -53,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/merriweathersans_bold"
-        android:text="Tuday"
+        android:text="Today"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

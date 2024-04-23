@@ -41,14 +41,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchWeatherData(citiyName: String) {
 
-        // Your api key so`zining o`rniga siz o`zingiznik api kalitingizni qo`ying
+
 
 
         val retrofir = Retrofit.Builder()
            .addConverterFactory(GsonConverterFactory.create())
            .baseUrl("https://api.openweathermap.org/data/2.5/")
            .build().create(ApiInterface::class.java)
-        val response = retrofir.getWeatherData(citiyName, "Your api key", "metric")
+        val response = retrofir.getWeatherData(citiyName, "718850cb37ae2338817995b173158bb9", "metric")
         response.enqueue(object : Callback<WeatherApp>{
             override fun onResponse(call: Call<WeatherApp>, response: Response<WeatherApp>) {
                 val responseBody = response.body()
